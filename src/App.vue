@@ -1,6 +1,6 @@
 <template>
-  <NavBar/>
-  <router-view></router-view>
+  <NavBar class="navBar"/>
+  <router-view class="routerView"></router-view>
 </template>
 
 <script>
@@ -15,9 +15,14 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@400;500;700&display=swap');
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
+
 </style>
