@@ -45,7 +45,12 @@
 </template>
 <script>
 export default {
-    name: 'HistoryView'
+    name: 'HistoryView',
+    data(){
+        return{
+            medidas: []
+        }
+    }
 }
 </script>
 <style scoped>

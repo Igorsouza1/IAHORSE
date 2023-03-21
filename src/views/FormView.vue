@@ -1,11 +1,11 @@
 <template >
     <div>
-        <Form class="m-2"  method="POST" action="http://localhost:8787/submit">
-            <p id="info">*Todas as medidas em Metros*</p>
+        <Form class="m-2" @submit="predict()">
+            <p id="info" >*Todas as medidas em Metros*</p>
             <div class="form-group mb-2">   
                 <label for="alturaDaCernelha">Altura da Cernelha:</label>
-                <Field type="number" v-model="alturaDaCernelha" class="form-control"
-                    id="alturaDaCernelha" placeholder="altura Da Cernelha " :rules="validate"
+                <Field type="number"  v-model="alturaDaCernelha" class="form-control"
+                    id="alturaDaCernelha" placeholder="altura Da Cernelha" :rules="validate" 
                     name="alturaDaCernelha" />
                 <ErrorMessage name="comprimentoCorpo" style="color: red;" />
             </div>
@@ -83,7 +83,7 @@
                 </div>
             </fieldset>
             <div class="row justify-content-center">
-                <button type="submit" href="http://localhost:8080/#/resultado" class="btn btn-primary w-50 p-3">Calcular</button>
+                <button type="submit" class="btn btn-primary w-50 p-3">Calcular</button>
             </div>
 
         </Form>
@@ -91,6 +91,10 @@
 </template>
 <script>
 import { Form, Field, ErrorMessage } from 'vee-validate'
+import KNN from 'ml-knn';
+import medidasx from '../assets/medidas/medidasx'
+import medidasy from '../assets/medidas/medidasy'
+import db from '../functions/db'  
 
 
 export default {
@@ -112,44 +116,71 @@ export default {
                 alturaDaCernelha: null,
                 alturaDoDorso: null,
                 larguraDoTorax: null,
-                sexo: 0
+                sexo: 0,
+                knn: null,
         }
+    },
+    created() {
+        this.trainModel();
     },
     methods: {
         //Verifica se os campos do formulario estao vazios
         validate(value) {
             // if the field is empty
             if (!value) {
-                return 'Este campo é obriagatório';
+                return 'Este campo é obrigatório';
+            }
+
+            if(value > 2.5){
+                return 'Informe uma medida valida'
             }
             // All is good
             return true;
         },
-        solicitacao(){
-            fetch('http://localhost:8080/#/index.js', {
-                method: 'GET', // ou 'GET', 'PUT', etc.
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({algumDado: 'valor'})
-                })
-                .then(response => response.json())
-                .then(data => {
-                // faça algo com a resposta da função
-                console.log(data)
-                })
-                .catch(error => {
-                // trate o erro, se necessário
-                console.log(error)
-                });
-        }
-                },
+
+        trainModel(){
+            this.knn = new KNN(medidasx, medidasy, {k: 3});
+            console.log('Modelo treinado com Sucesso!')
+        },
+
+        async predict(){
+            
+            if(this.knn == null){
+                this.trainModel()
+            }
+            
+            const input = [this.comprimentoDoCorpo, this.comprimentoDaEspadua, this.comprimentoDorsoLombar,
+            this.larguraDoPeito, this.larguraDasAncas, this.alturaDaGarupa, this.alturaDaCernelha, 
+            this.alturaDoDorso, this.larguraDoTorax, this.sexo]
+            
+            const inputArray = input.map(parseFloat);
+            const result = this.knn.predict(inputArray);
+
+            await this.addData(inputArray, result)
+            
+            console.log(result)
+
+            this.$router.push('/resultado');
+        },
+        
+        async addData(arr, result) {
+            await db.medidas.add({ comprimentoDoCorpo: arr[0], comprimentoDaEspadua: arr[1]
+             , comprimentoDorsoLombar: arr[2], larguraDoPeito: arr[3],
+             larguraDasAncas: arr[4], alturaDaGarupa: arr[5], alturaDaCernelha: arr[6], alturaDoDorso: arr[7]
+            ,larguraDoTorax: arr[8], sexo: arr[9], classe: result});
+            console.log('Data added');
+        },
+
+        
+    },
 
 }
 </script>
 <style scoped>
     form{
+        padding: 10px;
         padding-bottom: 100px;
+        font-family: 'Poppins' sans-serif;
     }
 
     #info{

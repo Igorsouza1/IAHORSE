@@ -11,7 +11,7 @@
       <div class="navigation-icon">
         <router-link to="/classificador">
         <a href="#">
-          <img id="calcular-icon" src="../assets/calcular-icon.png" alt="">
+          <img id="calcular-icon" src="../assets/machine-learning.png" alt="">
           <p>Classificador</p>
         </a>
       </router-link>
@@ -50,7 +50,7 @@ export default {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   z-index: 10;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .navigation-icons {
