@@ -7,7 +7,7 @@
                 <Field type="number"  v-model="alturaDaCernelha" class="form-control"
                     id="alturaDaCernelha" placeholder="altura Da Cernelha" :rules="validate" 
                     name="alturaDaCernelha" />
-                <ErrorMessage name="comprimentoCorpo" style="color: red;" />
+                <ErrorMessage name="alturaDaCernelha" style="color: red;" />
             </div>
             <div class="form-group mb-2">
                 <label for="alturaDoDorso">Altura do Dorso</label>
