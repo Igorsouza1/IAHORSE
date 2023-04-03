@@ -8,6 +8,7 @@
     <section class="about">
       <div class="about-content">
         <h1 class="about-title">Cavalo Pantaneiro</h1>
+        <div class="cards">
         <div class="card">
           <img src="../assets/cavalo-icone.svg" alt="ícone" class="icone">
           <p class="texto"> O cavalo pantaneiro é uma raça adaptada ao ambiente do Pantanal.
@@ -24,6 +25,7 @@
           <p class="texto">São utilizados para trabalho em fazendas e para
              cavalgadas na região, além de serem considerados símbolos culturais do Brasil.</p>
         </div>
+      </div>
       </div>
     </section>
     <section class="caract">
@@ -111,6 +113,8 @@
   }
   </script>
   <style scoped>
+
+@media (max-width: 749px) {
   .hero {
     background-image: url('../assets/cavalo9.jpeg');
     background-size: cover;
@@ -126,7 +130,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 95%;
     background-color: rgba(0, 0, 0, 0.2); /* Aqui definimos a cor e a transparência do overlay */
   }
   
@@ -183,7 +187,7 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,1);
     margin-bottom: 20px;
-    border-top: 1px solid black;
+    border-top: 1px solid #002e34;
   }
   
   .icone {
@@ -199,7 +203,7 @@
   }
 
   .caract{
-    background-color: black;
+    background-color: #004443;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -269,7 +273,194 @@
     width: 100%;
     content: '';
     text-align: center;
-    background: black;
+    background: #004443;
+    color: white;
+    display: flex;
+    
+    padding-bottom: 100px;
+  }
+
+  .footer-container{
+    width: 50%;
+    
+  }
+
+  .footer-container p{ 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+  }
+
+}
+
+@media (min-width: 750px) {
+  .hero {
+    background-image: url('../assets/cavalo9.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    height: 95vh;
+    text-align: center;
+}
+
+.hero-content{
+  color:#fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    background-color: rgba(0, 0, 0, 0.15); /* Aqui definimos a cor e a transparência do overlay */
+  }
+
+  .icone{
+    width: 50px;
+  }
+  .about{
+    height:100%;
+    width: 100%;
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .about-headline{
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: black;
+    font-weight: 400;
+    padding-top: 1.5rem;
+    width: 100%;
+  }
+
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 40%;
+    margin: 1rem;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,2);
+    margin-bottom: 20px;
+    border-top: 1px solid black;
+  }
+  
+  .icone {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .texto {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+  }
+
+  .caract{
+    background-color: #004443;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .caract-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .caract-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+  
+  }
+
+  .about-text{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    display: flex;
+    width: 60%;
+  }
+
+  .app{
+    width: 100%;
+    text-align: center;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+
+
+  .app-title{
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 2.5rem;
+    margin-top: 1 rem;
+  }
+
+  .app-text{
+    color: black;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    width: 60%;
+  }
+
+  .info{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .info-title{
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .medidas{
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .medidas span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+
+  footer{
+    width: 100%;
+    content: '';
+    text-align: center;
+    background: #004443;
     color: white;
     display: flex;
     
@@ -287,4 +478,5 @@
   }
 
 
+}
   </style>

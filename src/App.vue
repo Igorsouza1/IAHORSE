@@ -25,4 +25,8 @@ export default {
   font-family: 'Roboto', sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 </style>

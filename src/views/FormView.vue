@@ -1,7 +1,9 @@
 <template >
-    <div>
+    <div class="form-container">
         <Form class="m-2" @submit="predict()">
-            <p id="info" >*Todas as medidas em Metros*</p>
+            <div id="info-content">
+                <p id="info" >Todas as medidas em Metros</p>
+            </div>
             <div class="form-group mb-2">   
                 <label for="alturaDaCernelha">Altura da Cernelha:</label>
                 <Field type="number"  v-model="alturaDaCernelha" class="form-control"
@@ -83,7 +85,7 @@
                 </div>
             </fieldset>
             <div class="row justify-content-center">
-                <button type="submit" class="btn btn-primary w-50 p-3">Calcular</button>
+                <button type="submit" class="btn btn-primary custom-btn w-50 p-3">Calcular</button>
             </div>
 
         </Form>
@@ -177,13 +179,66 @@ export default {
 }
 </script>
 <style scoped>
+    #info{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: #ffffff;
+        background-color: #00755c;
+        border-radius: 5px;
+        padding: 8px;
+        margin-top: 10px;
+        margin-bottom: 1rem;
+        display: inline-block;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
     form{
         padding: 10px;
         padding-bottom: 100px;
         font-family: 'Poppins' sans-serif;
     }
 
-    #info{
+    .form-group{
+        padding-bottom: 1rem;
+    }
+
+    .form-control:focus {
+    border-color: #00755c;
+    box-shadow: 0 0 0 0.2rem rgba(0, 46, 52, 0.25)
+}
+
+
+    .form-check-input:checked {
+    background-color: #00755c;
+    border-color: #00755c;
+    }
+
+    .custom-btn {
+    background-color: #00755c;
+    border-color: #00755c;
+    }
+
+    .custom-btn:hover,
+    .custom-btn:focus,
+    .custom-btn:active {
+    background-color: #005b4a;
+    border-color: #005b4a;
+    }
+
+    #info-content{
         text-align: center;
+    }
+
+    @media (min-width: 750px) {
+        .form-container{
+            display: flex;
+            justify-content: center;
+        }
+        
+        form{
+            width: 50%;
+            margin: 0 auto;
+        }
     }
 </style>
