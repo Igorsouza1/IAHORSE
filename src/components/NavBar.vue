@@ -72,6 +72,7 @@ export default {
     text-align: center;
     width: 33.33%;
     padding-top: 0.8rem;
+    transition: all 0.3s ease;
   }
 
   .navigation-icon img{
@@ -88,10 +89,9 @@ export default {
   }
 
   .navigation-icon:hover {
-    background-color: #00755c;
-    transition: background-color 0.3s ease-in-out;
-    border-radius: 20%;
-    transition: all 0.3s ease;
+    background-color: rgba(0, 117, 92, 0.3  );
+    transform: translateY(-5px); /* Move o ícone para cima */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); 
   }
 
 }
