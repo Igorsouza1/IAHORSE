@@ -16,7 +16,7 @@
                 <p class="card-text">Largura das Ancas: {{larguraAncas}} </p>
                 <p class="card-text">Perimetro do Torax: {{larguraDoTorax}} </p>
                 <div class="novasMeddias">
-                    <a href="/#/classificador" class="card-link btn btn-primary mt-5">Novas medidas</a>
+                    <a href="/#/classificador" class="card-link btn btn-primary mt-5 custom-btn">Novas medidas</a>
                 </div>
             </div>
         </div>
@@ -104,29 +104,13 @@ export default {
         justify-content: center;
     }
 
-    #buttonCorreto{
-        color: black;
-        background-color: green;
-        width: 5rem;
-        height: 3rem;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        margin-right: 10px;
-    }
-
-    #buttonErrado{
-        color: black;
-        background-color: red;
-        width: 5rem;
-        height: 3rem;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        margin-left: 10px;
+    .custom-btn {
+    background-color: #00755c;
+    border-color: #00755c;
     }
 
     .novasMeddias{
         text-align: center;
+        
     }
 </style>

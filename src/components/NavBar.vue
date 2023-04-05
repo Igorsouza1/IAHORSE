@@ -89,7 +89,7 @@ export default {
   }
 
   .navigation-icon:hover {
-    background-color: rgba(0, 117, 92, 0.3  );
+    background-color: rgba(0, 117, 92, 0.5);
     transform: translateY(-5px); /* Move o ícone para cima */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); 
   }
