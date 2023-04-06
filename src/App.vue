@@ -25,6 +25,13 @@ export default {
   font-family: 'Roboto', sans-serif;
 }
 
+:root{
+    --background-color: #fff;
+    --hover-linear-init: #1ee9b6;
+    --hover-linear-to: #27b049;
+    --border-hover: #2e114c;
+}
+
 html{
   scroll-behavior: smooth;
 }
