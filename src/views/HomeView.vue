@@ -9,21 +9,40 @@
       <div class="about-content">
         <h1 class="title">Cavalo Pantaneiro</h1>
         <div class="cards">
+        
+          <!-- CARD 1 -->
         <div class="card">
           <img src="../assets/cavalo-icone.svg" alt="ícone" class="icone">
-          <p class="texto"> O cavalo pantaneiro é uma raça adaptada ao ambiente do Pantanal.
-            Resultado da seleção natural ao longo dos anos.
+          <p class="texto"> O cavalo pantaneiro, nativo do Pantanal brasileiro, 
+            é conhecido por sua resistência e capacidade de adaptação às condições
+             extremas do bioma, como áreas alagadas e altas temperaturas.
              </p>
         </div>
+
+        <!-- CARD 2 -->
         <div class="card">
           <img src="../assets/casco.png" alt="ícone" class="icone">
-          <p class="texto"> Suportam altas temperaturas e enchentes, 
-            têm cascos fortes para se locomoverem em terrenos pantanosos.</p>
+          <p class="texto">Graças à sua morfologia, incluindo cascos largos e 
+            fortes, essa raça possui notável habilidade para atravessar terrenos
+             alagados e lamacentos, sendo um aliado importante para os trabalhadores
+              rurais da região.</p>
         </div>
+
+        <!-- CARD 3 -->
         <div class="card">
           <img src="../assets/horse.png" alt="ícone" class="icone">
-          <p class="texto">São utilizados para trabalho em fazendas e para
-             cavalgadas na região, além de serem considerados símbolos culturais do Brasil.</p>
+          <p class="texto">A origem do cavalo pantaneiro remonta ao século XVI, 
+            fruto do cruzamento de diversas raças, como o Andaluz e o G
+            arrano, trazidas pelos colonizadores portugueses e espanhóis.</p>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+          <img src="../assets/cavalo-de-troia.png" alt="ícone" class="icone">
+          <p class="texto">A pelagem do cavalo pantaneiro é diversificada, 
+            podendo apresentar cores como tordilho, baio, alazão e outros 
+            tons, além de possuir pelos curtos e sedosos, o que auxilia na 
+            regulação térmica do animal.</p>
         </div>
       </div>
       </div>
@@ -129,9 +148,10 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 100%;
     height: 90%;
-    background-color: rgba(0, 0, 0, 0.2); /* Aqui definimos a cor e a transparência do overlay */
+    background-color: rgba(0, 0, 0, 0.3); /* Aqui definimos a cor e a transparência do overlay */
   }
   
   .hero-content {
@@ -146,6 +166,7 @@
   .hero-title {
     font-size: 3rem;
     color: #fff;
+    z-index: 2;
   }
   
   .hero-headline {
@@ -153,6 +174,7 @@
     margin-bottom: 1.5rem;
     color: #fff;
     font-weight: 500;
+    z-index: 2;
   }
 
   .about{
@@ -196,10 +218,15 @@
     width: 50px;
     height: 50px;
     margin-bottom: 10px;
+    background-color: rgba(145, 145, 145, 0.24); /* Cor preta com 10% de opacidade */
+    border-radius: 5px; /* Borda arredondada */
+    padding: 5px; /* Espaçamento interno */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   }
   
   .texto {
-    text-align: center;
+    text-align: justify;
+    width: 90%;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
   }
@@ -318,7 +345,9 @@
     width: 100%;
     height: 95%;
     background-color: rgba(0, 0, 0, 0.15); /* Aqui definimos a cor e a transparência do overlay */
+    z-index: 1;
   }
+
 
   .icone{
     width: 50px;
@@ -335,6 +364,7 @@
     color: black;
     margin-bottom: 2.5rem;
     margin-top: 1rem;
+    
   }
 
   .about-headline{
@@ -350,6 +380,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .card {
