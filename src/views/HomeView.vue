@@ -87,14 +87,29 @@
 </div>
 
       <h1 class="title app-title">Classificador</h1>
-      <p class="app-text">
-        O aplicativo "Pantanal Horse Classifier" classifica cavalos pantaneiros em baixa, 
-        média e alta qualidade usando o algoritmo de machine learning KNN. <br> <br>Basta 
-        informar as medidas do cavalo e o aplicativo faz a análise automaticamente, dando uma classificação
-        precisa e confiável em segundos.<br><br> Com isso, criadores e entusiastas da raça podem 
-        identificar facilmente os melhores cavalos para reprodução e preservação genética 
-        da raça.
-      </p>
+    <div class="app-wrapper">
+      <div class="app-medidas">
+        <p class="app-text">
+          O aplicativo classifica os cavalos com base em sua conformação 
+          corporal, utilizando 9 medidas distintas. Através 
+          do algoritmo de aprendizado de máquina KNN, o aplicativo categoriza 
+          os cavalos em baixa, média e alta qualidade.
+        </p>
+        <div class="img-container">
+          <img src="../assets/cavalo-medidas.png" alt="">
+        </div>
+      </div>
+
+      <div class="app-knn">
+        <p class="app-text">O KNN, ou k-vizinhos mais próximos, é um método 
+          de aprendizado de máquina que identifica a semelhança entre 
+          itens. Ele verifica os "vizinhos" mais parecidos com o item desejado
+           e decide sua categoria com base na maioria desses vizinhos.</p>
+        <div class="img-container">
+          <img src="../assets/knnalgo.png" alt="">
+        </div>
+      </div>
+    </div>  
     </section>
     <section class="info">
       <h1 class="title app-title">Como tirar as medidas?</h1>
@@ -332,20 +347,35 @@
   .app{
     height: 550px;
     width: 100%;
+    height: 100%;
     text-align: center;
     padding: 1.25rem;
     
   }
 
+  .app-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+  }
+ 
+  .img-container img{
+    max-width: 410px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 5px 0 30px 0;
+  }
   .app-title{
     color: black;
   }
 
   .app-text{
     color: black;
-    text-align: center;
+    text-align: justify;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    letter-spacing: 1px;
   }
 
   .info{
@@ -580,6 +610,30 @@
     position: relative;
   }
 
+  .app-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .app-medidas{
+    width: 50%;
+  }
+
+ 
+  .img-container img{
+    max-width: 410px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .app-knn{
+    width: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
 
   .app-title{
     font-size: 2rem;
@@ -590,10 +644,12 @@
 
   .app-text{
     color: black;
-    text-align: center;
+    text-align: justify;
+    margin: 0 auto;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    width: 60%;
+    padding: 1rem;
+    letter-spacing: 1px;
   }
 
   .custom-shape-divider-top-1680800897 {
