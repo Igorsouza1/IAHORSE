@@ -1,5 +1,8 @@
   <template>
     <div class="navigation">
+      <div class="logoCavalo">
+        <img src="../assets/cavaloLogo.png" alt="">
+      </div>
       <div class="navigation-icons">
         <div class="navigation-icon">
           <router-link to="/">
@@ -89,7 +92,7 @@
  
     .navigation-icon [aria-current="page"] .icons {
       transition: 0.4s;
-      color: green;
+      color: #00755c;
       transform: scale(1.25);
     }
   }
@@ -118,7 +121,7 @@
       margin-top: 1rem;
     }
 
-    .navigation-icon img{
+    .navigation-icon .icons{
       display: none;
     }
 

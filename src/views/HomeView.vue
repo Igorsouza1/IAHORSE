@@ -1,13 +1,13 @@
 <template>
     <section class="hero">
       <div class="hero-content">
-        <h2 class="hero-title">Cavalo Pantaneiro um tesouro nacional</h2>
+        <h1 class="hero-title">Cavalo<br> Pantaneiro</h1>
         <p class="hero-headline">Uma raça de equino única e exuberante, originária das planícies alagadas do Pantanal.</p>
       </div>
     </section>
     <section class="about">
       <div class="about-content">
-        <h1 class="about-title">Cavalo Pantaneiro</h1>
+        <h1 class="title">Cavalo Pantaneiro</h1>
         <div class="cards">
         <div class="card">
           <img src="../assets/cavalo-icone.svg" alt="ícone" class="icone">
@@ -30,7 +30,7 @@
     </section>
     <section class="caract">
     <div class="caract-section">
-        <h1 class="caract-title">Preservação</h1>
+        <h1 class="title caract-title">Preservação</h1>
         <p class="about-text">O maior problema para a raça é a sua preservação e 
           classificação genética, devido à muitos anos de cruzamentos
            inautêntico. Esta situação resultou em uma extrema diversidade de
@@ -42,7 +42,7 @@
       </div>
     </section>
     <section class="app">
-      <h1 class="app-title">Classificador</h1>
+      <h1 class="title ">Classificador</h1>
       <p class="app-text">
         O aplicativo "Pantanal Horse Classifier" classifica cavalos pantaneiros em baixa, 
         média e alta qualidade usando o algoritmo de machine learning KNN. <br> <br>Basta 
@@ -53,7 +53,7 @@
       </p>
     </section>
     <section class="info">
-      <h1 class="info-title">Como tirar as medidas?</h1>
+      <h1 class="title app-title">Como tirar as medidas?</h1>
       <div class="medidas">
         <span>Altura da Cernelha (AC)</span>
         <p></p>
@@ -116,11 +116,11 @@
 
 @media (max-width: 749px) {
   .hero {
-    background-image: url('../assets/cavalo9.jpeg');
+    background-image: url('../assets/cavalo-mob.jpeg');
     background-size: cover;
     background-position: center;
     padding: 2rem;
-    height: 95vh;
+    height: 90vh;
     text-align: center;
 }
 
@@ -130,27 +130,29 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 95%;
+    height: 90%;
     background-color: rgba(0, 0, 0, 0.2); /* Aqui definimos a cor e a transparência do overlay */
   }
   
   .hero-content {
     max-width: 600px;
+    height: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
   
   .hero-title {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #fff;
-    margin-bottom: 18rem;
-    margin-top: 2rem;
   }
   
   .hero-headline {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
     color: #fff;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .about{
@@ -160,7 +162,7 @@
     padding: 1.25rem;
   }
 
-  .about-title {
+  .title {
     font-size: 2rem;
     color: black;
     margin-bottom: 2.5rem;
@@ -212,10 +214,7 @@
 
 
   .caract-title {
-    font-size: 2rem;
     color: #fff;
-    margin-bottom: 2.5rem;
-    margin-top: 1rem;
   }
 
   .about-text{
@@ -230,13 +229,11 @@
     width: 100%;
     text-align: center;
     padding: 1.25rem;
+    
   }
 
   .app-title{
-    font-size: 2rem;
-    color: black;
-    margin-bottom: 2.5rem;
-    margin-top: 1rem;
+    color: #fff;
   }
 
   .app-text{
@@ -247,9 +244,12 @@
   }
 
   .info{
+    background-color: #004443;
     height: 100%;
     width: 100%;
     text-align: center;
+    padding: 1.25rem;
+    color: #fff;
   }
 
   .info-title{
@@ -273,7 +273,7 @@
     width: 100%;
     content: '';
     text-align: center;
-    background: #004443;
+    background: rgba(0,0,0,80%);
     color: white;
     display: flex;
     
