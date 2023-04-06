@@ -46,22 +46,47 @@
         </div>
       </div>
       </div>
+      
     </section>
+   
     <section class="caract">
+      
+      <div class="custom-shape-divider-top-1680795833">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div>
+
     <div class="caract-section">
-        <h1 class="title caract-title">Preservação</h1>
+      <h1 class="title caract-title">Preservação</h1>
+      <div class="content-wrapper">
+      <div class="caract-content">
         <p class="about-text">O maior problema para a raça é a sua preservação e 
-          classificação genética, devido à muitos anos de cruzamentos
-           inautêntico. Esta situação resultou em uma extrema diversidade de
+          classificação genético. Muitos anos de cruzamentos
+           inautêntico resultou em uma extrema diversidade de
             tipos, tanto morfológicos como de qualidade.<br> <br>
           O padrão da raça foi definido pela Associação Brasileira 
-          de Criadores de Cavalos Pantaneiros (ABCCP), criada em 1972.
+          de Criadores de Cavalos Pantaneiros (ABCCP).
            Desde a formação da raça, os criadores vêm selecionando e melhorando 
-           esse animal, um dos aspectos mais selecionados é a conformação corporal.</p>
+           esse animal, um dos aspectos selecionados é a conformação corporal.</p>
       </div>
+      <div class="caract-img">
+        <img src="../assets/cavalo5.jpeg" alt="">
+      </div>
+    </div>
+      </div>
+
+
     </section>
     <section class="app">
-      <h1 class="title ">Classificador</h1>
+      
+      <div class="custom-shape-divider-top-1680800897">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+</div>
+
+      <h1 class="title app-title">Classificador</h1>
       <p class="app-text">
         O aplicativo "Pantanal Horse Classifier" classifica cavalos pantaneiros em baixa, 
         média e alta qualidade usando o algoritmo de machine learning KNN. <br> <br>Basta 
@@ -218,7 +243,7 @@
     width: 50px;
     height: 50px;
     margin-bottom: 10px;
-    background-color: rgba(145, 145, 145, 0.24); /* Cor preta com 10% de opacidade */
+    background-color: rgba(0, 117, 92, 0.8);
     border-radius: 5px; /* Borda arredondada */
     padding: 5px; /* Espaçamento interno */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -231,24 +256,77 @@
     font-weight: 300;
   }
 
+  
+
   .caract{
-    background-color: #004443;
+    
+    position: relative;
     height: 100%;
     width: 100%;
     text-align: center;
     padding: 1.25rem;
+    background-image: url(../assets/cavalopantanal.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    text-align: center;
+    
+  }
+  .custom-shape-divider-top-1680795833 {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 3;
+}
+
+.custom-shape-divider-top-1680795833 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+.custom-shape-divider-top-1680795833 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-top-1680800897{
+  display: none;
+}
+
+  .caract::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
   }
 
+  .caract-img{
+    display: none;
+  }
 
   .caract-title {
+    position: relative;
     color: #fff;
+    z-index: 2;
   }
 
   .about-text{
     color: #fff;
-    text-align: center;
+    text-align: justify;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    position: relative;
+    z-index: 2;
+    width: 95%;
+    margin: 0 auto;
   }
 
   .app{
@@ -260,7 +338,7 @@
   }
 
   .app-title{
-    color: #fff;
+    color: black;
   }
 
   .app-text{
@@ -410,19 +488,42 @@
   }
 
   .caract{
-    background-color: #004443;
+    background-color: rgba(0,68,67,95%);
     height: 100%;
     width: 100%;
     text-align: center;
-    padding: 1.25rem;
+    padding: 1.5rem;
+    position: relative;
+    padding-bottom: 2rem;
   }
 
+  .custom-shape-divider-top-1680795833 {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1680795833 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.custom-shape-divider-top-1680795833 .shape-fill {
+    fill: #FFFFFF;
+}
+
   .caract-section{
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    width: 90%;
+    margin: 0 auto;
   }
   
+
   .caract-title {
     font-size: 2rem;
     color: #fff;
@@ -436,17 +537,47 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     display: flex;
-    width: 60%;
+    text-align: justify;
+    width: 95%;
+    letter-spacing: 2px;
   }
+
+  .content-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .caract-content{
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+
+  .caract-img{
+    position: relative;
+    width: 50%;
+  }
+
+  .caract-img img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  }
+
+
 
   .app{
     width: 100%;
+    height: 100%;
     text-align: center;
-    padding: 1.25rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid black;
+    position: relative;
   }
 
 
@@ -454,7 +585,7 @@
     font-size: 2rem;
     color: black;
     margin-bottom: 2.5rem;
-    margin-top: 1 rem;
+    margin-top: 2rem;
   }
 
   .app-text{
@@ -464,6 +595,28 @@
     font-weight: 400;
     width: 60%;
   }
+
+  .custom-shape-divider-top-1680800897 {
+    position: absolute;
+    top: -0px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1680800897 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+}
+
+.custom-shape-divider-top-1680800897 .shape-fill {
+    fill: rgba(0,68,67,95%);;
+}
+
 
   .info{
     height: 100%;
