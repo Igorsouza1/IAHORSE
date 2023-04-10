@@ -241,16 +241,24 @@
 
     <footer>
       <div class="footer-container"></div>
+      <div class="footer-left">
+      <img src="../assets/embrapalogo.jpg" alt="">
       <p>Empresa Brasileira de Pesquisa Agropecuária
 
       Parque Estação Biológica - PqEB, s/nº, Brasília, DF
 
       CEP 70770-901 / Telefone (61) 3448-4433</p>
+
+    </div>
+
+    <div class="footer-right">
+      <img src="../assets/ifms.png" alt="">
       <p>
         Todos os direitos reservados, conforme Lei nº 9.610
 
-        Portal Embrapa (Versão 3.136.0) p02
+        Portal Embrapa
       </p>
+    </div>
     </footer>
   </template>
   <script>
@@ -581,7 +589,7 @@
     background: rgba(0,0,0,80%);
     color: white;
     display: flex;
-    
+    flex-direction: column;
     padding-bottom: 100px;
   }
 
@@ -595,6 +603,23 @@
     font-weight: 300;
   }
 
+  .footer-left img{
+    width: 200px;
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .footer-right{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer-right img{
+    width: 200px;
+    padding: 1rem;
+    border-radius: 20px;
+  }
 }
 
 @media (min-width: 750px) {
@@ -882,7 +907,7 @@
   .medidas{
     width: 50%;
     position: relative;
-    padding-bottom: 1rem;
+    padding-bottom: 2.5rem;
     margin: 0 auto;
     color: #fff;
   }
@@ -947,18 +972,35 @@
 
   footer{
     width: 100%;
+    height: 100%;
     content: '';
     text-align: center;
-    background: rgba(0,0,0,90%);
+    background: rgba(0,0,0,70%);
     color: white;
     display: flex;
-    
-    padding-bottom: 100px;
+    align-items: center;
   }
 
-  .footer-container{
+
+  .footer-left{
     width: 50%;
-    
+    padding: 1rem;
+  }
+
+  .footer-left img{
+    width: 200px;
+    border-radius: 10px;
+    padding-bottom: 1rem;
+  }
+
+  .footer-right{
+    width: 50%;
+  }
+
+  .footer-right img{
+    width: 200px;
+    border-radius: 10px;
+    padding-bottom: 1rem;
   }
 
   .footer-container p{ 
