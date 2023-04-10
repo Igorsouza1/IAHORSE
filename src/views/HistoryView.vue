@@ -96,7 +96,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-weight: 400;
         margin-top: 20px;
         margin-bottom: 5rem;
@@ -109,6 +109,7 @@ export default {
     .history-headline h1 {
         font-size: 2rem;
         font-weight: 700;
+        font-family: 'Poppins';
     }
 
     .history-list {

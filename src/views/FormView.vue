@@ -1,63 +1,66 @@
 <template >
     <div class="form-container">
         <Form class="m-2" @submit="predict()">
+            <div class="title-container">
+                <h1 class="form-title">Classificador</h1>
+            </div>
             <div id="info-content">
                 <p id="info" >Todas as medidas em Metros</p>
             </div>
             <div class="form-group mb-2">   
                 <label for="alturaDaCernelha">Altura da Cernelha:</label>
-                <Field type="number"  v-model="alturaDaCernelha" class="form-control"
+                <Field v-decimal-input  type="number"  v-model="alturaDaCernelha" class="form-control"
                     id="alturaDaCernelha" placeholder="altura Da Cernelha" :rules="validate" 
                     name="alturaDaCernelha" />
                 <ErrorMessage name="alturaDaCernelha" style="color: red;" />
             </div>
             <div class="form-group mb-2">
                 <label for="alturaDoDorso">Altura do Dorso</label>
-                <Field type="number" v-model="alturaDoDorso" class="form-control"
+                <Field v-decimal-input type="number" v-model="alturaDoDorso" class="form-control"
                     id="alturaDoDorso" placeholder="altura Do Dorso" :rules="validate"
                     name="alturaDoDorso" />
                 <ErrorMessage name="alturaDoDorso" style="color: red;" />
             </div>
             <div class="form-group mb-2">
                 <label for="alturaDaGarupa">Altura da Garupa:</label>
-                <Field type="number" v-model="alturaDaGarupa" class="form-control"
+                <Field v-decimal-input type="number" v-model="alturaDaGarupa" class="form-control"
                     id="alturaDaGarupa" placeholder="altura Da Garupa" :rules="validate"
                     name="alturaDaGarupa" />
                 <ErrorMessage name="alturaDaGarupa" style="color: red;" />
             </div>
             <div class="form-group mb-2">
                 <label for="comprimentoDoCorpo">Comprimento do Corpo:</label>
-                <Field type="number" v-model="comprimentoDoCorpo" class="form-control" id="comprimentoDoCorpo"
+                <Field v-decimal-input type="number" v-model="comprimentoDoCorpo" class="form-control" id="comprimentoDoCorpo"
                     placeholder="comprimento Do Corpo" :rules="validate" name="comprimentoDoCorpo" />
                 <ErrorMessage name="comprimentoDoCorpo" style="color: red;" />
             </div>
             <div class="form-group mb-2">
                 <label for="comprimentoDaEspadua">Comprimento da Espadua:</label>
-                <Field type="number" v-model="comprimentoDaEspadua" class="form-control" id="comprimentoDaEspadua"
+                <Field v-decimal-input type="number" v-model="comprimentoDaEspadua" class="form-control" id="comprimentoDaEspadua"
                     placeholder="Comprimento Da Espadua" :rules="validate" name="comprimentoDaEspadua" />
                 <ErrorMessage name="comprimentoDaEspadua" style="color: red;" />
             </div>
             <div class="form-group mb-2">
                 <label for="comprimentoDorsoLombar">Comprimento DorsoLombar:</label>
-                <Field type="number" v-model="comprimentoDorsoLombar" class="form-control" id="comprimentoDorsoLombar"
+                <Field v-decimal-input type="number" v-model="comprimentoDorsoLombar" class="form-control" id="comprimentoDorsoLombar"
                     placeholder="Comprimento DorsoLombar" :rules="validate" name="comprimentoDorsoLombar" />
                 <ErrorMessage name="comprimentoDorsoLombar" style="color: red;" />
             </div>
             <div class="form-group mb-2">
                 <label for="larguraDoPeito">Largura do Peito:</label>
-                <Field type="number" v-model="larguraDoPeito" class="form-control" id="larguraDoPeito"
+                <Field v-decimal-input type="number" v-model="larguraDoPeito" class="form-control" id="larguraDoPeito"
                     placeholder="largura Do Peito" :rules="validate" name="larguraDoPeito" />
                 <ErrorMessage name="larguraDoPeito" style="color: red;" />
             </div>
             <div class="form-group mb-2">
                 <label for="larguraDasAncas">Largura das Ancas:</label>
-                <Field type="number" v-model="larguraDasAncas" class="form-control" id="larguraDasAncas"
+                <Field v-decimal-input type="number" v-model="larguraDasAncas" class="form-control" id="larguraDasAncas"
                     placeholder="Altura do dorso" :rules="validate" name="larguraDasAncas" />
                 <ErrorMessage name="larguraDasAncas" style="color: red;" />
             </div>
             <div class="form-group mb-2">
                 <label for="larguraDoTorax">Perimetro do Torax:</label>
-                <Field type="number" v-model="larguraDoTorax" class="form-control" id="larguraDoTorax"
+                <Field v-decimal-input type="number" v-model="larguraDoTorax" class="form-control" id="larguraDoTorax"
                     placeholder="Perimetro do Torax" :rules="validate" name="larguraDoTorax" />
                 <ErrorMessage name="larguraDoTorax" style="color: red;" />
             </div>
@@ -97,6 +100,7 @@ import KNN from 'ml-knn';
 import medidasx from '../assets/medidas/medidasx'
 import medidasy from '../assets/medidas/medidasy'
 import db from '../functions/db'  
+import DecimalInput from "../functions/decimal-input";
 
 
 export default {
@@ -106,6 +110,9 @@ export default {
         Form,
         Field,
         ErrorMessage
+    },
+    directives: {
+        decimalInput: DecimalInput,
     },
     data() {
         return {   
@@ -133,7 +140,7 @@ export default {
                 return 'Este campo é obrigatório';
             }
 
-            if(value > 2.5){
+            if(value > 2.5 || value < 0){
                 return 'Informe uma medida valida'
             }
             // All is good
@@ -172,9 +179,8 @@ export default {
             ,larguraDoTorax: arr[8], sexo: arr[9], classe: result});
             console.log('Data added');
         },
-
-        
     },
+ 
 
 }
 </script>
@@ -191,6 +197,16 @@ export default {
         margin-bottom: 1rem;
         display: inline-block;
         box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .title-container{
+        text-align: center;
+    }
+
+    .form-title{
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
     }
 
     form{
