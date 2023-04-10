@@ -11,5 +11,5 @@ export default {
       const decimalPart = value.slice(-2);
       el.value = `${integerPart}.${decimalPart}`;
     });
-  },
+  }
 };

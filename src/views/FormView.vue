@@ -8,60 +8,78 @@
                 <p id="info" >Todas as medidas em Metros</p>
             </div>
             <div class="form-group mb-2">   
-                <label for="alturaDaCernelha">Altura da Cernelha:</label>
-                <Field v-decimal-input  type="number"  v-model="alturaDaCernelha" class="form-control"
-                    id="alturaDaCernelha" placeholder="altura Da Cernelha" :rules="validate" 
-                    name="alturaDaCernelha" />
+                <div class="form-inputs">
+                    <label class="form-label" for="alturaDaCernelha">Altura da Cernelha:</label>
+                    <Field v-decimal-input  type="number"  v-model="alturaDaCernelha" class="form-control"
+                            id="alturaDaCernelha"  :rules="validate" 
+                            name="alturaDaCernelha" />
+                </div>
                 <ErrorMessage name="alturaDaCernelha" style="color: red;" />
             </div>
             <div class="form-group mb-2">
-                <label for="alturaDoDorso">Altura do Dorso</label>
-                <Field v-decimal-input type="number" v-model="alturaDoDorso" class="form-control"
-                    id="alturaDoDorso" placeholder="altura Do Dorso" :rules="validate"
-                    name="alturaDoDorso" />
+                <div class="form-inputs">
+                    <label class="form-label" for="alturaDoDorso">Altura do Dorso:</label>
+                    <Field v-decimal-input type="number" v-model="alturaDoDorso" class="form-control"
+                        id="alturaDoDorso" placeholder="altura Do Dorso" :rules="validate"
+                        name="alturaDoDorso" />
+                </div>
                 <ErrorMessage name="alturaDoDorso" style="color: red;" />
             </div>
             <div class="form-group mb-2">
-                <label for="alturaDaGarupa">Altura da Garupa:</label>
-                <Field v-decimal-input type="number" v-model="alturaDaGarupa" class="form-control"
-                    id="alturaDaGarupa" placeholder="altura Da Garupa" :rules="validate"
-                    name="alturaDaGarupa" />
+                <div class="form-inputs">
+                    <label class="form-label" for="alturaDaGarupa">Altura da Garupa:</label>
+                    <Field v-decimal-input type="number" v-model="alturaDaGarupa" class="form-control"
+                        id="alturaDaGarupa" placeholder="altura Da Garupa" :rules="validate"
+                        name="alturaDaGarupa" />
+                </div>
                 <ErrorMessage name="alturaDaGarupa" style="color: red;" />
             </div>
             <div class="form-group mb-2">
-                <label for="comprimentoDoCorpo">Comprimento do Corpo:</label>
-                <Field v-decimal-input type="number" v-model="comprimentoDoCorpo" class="form-control" id="comprimentoDoCorpo"
-                    placeholder="comprimento Do Corpo" :rules="validate" name="comprimentoDoCorpo" />
+                <div class="form-inputs">
+                    <label class="form-label" for="comprimentoDoCorpo">Comprimento do Corpo:</label>
+                    <Field v-decimal-input type="number" v-model="comprimentoDoCorpo" class="form-control" id="comprimentoDoCorpo"
+                        placeholder="comprimento Do Corpo" :rules="validate" name="comprimentoDoCorpo" />
+                </div>
                 <ErrorMessage name="comprimentoDoCorpo" style="color: red;" />
             </div>
             <div class="form-group mb-2">
-                <label for="comprimentoDaEspadua">Comprimento da Espadua:</label>
-                <Field v-decimal-input type="number" v-model="comprimentoDaEspadua" class="form-control" id="comprimentoDaEspadua"
-                    placeholder="Comprimento Da Espadua" :rules="validate" name="comprimentoDaEspadua" />
+                <div class="form-inputs">
+                    <label class="form-label" for="comprimentoDaEspadua">Comprimento da Espadua:</label>
+                    <Field v-decimal-input type="number" v-model="comprimentoDaEspadua" class="form-control" id="comprimentoDaEspadua"
+                        placeholder="Comprimento Da Espadua" :rules="validate" name="comprimentoDaEspadua" />
+                </div>
                 <ErrorMessage name="comprimentoDaEspadua" style="color: red;" />
             </div>
             <div class="form-group mb-2">
-                <label for="comprimentoDorsoLombar">Comprimento DorsoLombar:</label>
-                <Field v-decimal-input type="number" v-model="comprimentoDorsoLombar" class="form-control" id="comprimentoDorsoLombar"
-                    placeholder="Comprimento DorsoLombar" :rules="validate" name="comprimentoDorsoLombar" />
+                <div class="form-inputs">
+                    <label class="form-label" for="comprimentoDorsoLombar">Comprimento DorsoLombar:</label>
+                    <Field v-decimal-input type="number" v-model="comprimentoDorsoLombar" class="form-control" id="comprimentoDorsoLombar"
+                        placeholder="Comprimento DorsoLombar" :rules="validate" name="comprimentoDorsoLombar" />
+                </div>
                 <ErrorMessage name="comprimentoDorsoLombar" style="color: red;" />
             </div>
             <div class="form-group mb-2">
-                <label for="larguraDoPeito">Largura do Peito:</label>
-                <Field v-decimal-input type="number" v-model="larguraDoPeito" class="form-control" id="larguraDoPeito"
-                    placeholder="largura Do Peito" :rules="validate" name="larguraDoPeito" />
+                <div class="form-inputs">
+                    <label class="form-label" for="larguraDoPeito">Largura do Peito:</label>
+                    <Field v-decimal-input type="number" v-model="larguraDoPeito" class="form-control" id="larguraDoPeito"
+                        placeholder="largura Do Peito" :rules="validate" name="larguraDoPeito" />
+                </div>
                 <ErrorMessage name="larguraDoPeito" style="color: red;" />
             </div>
             <div class="form-group mb-2">
-                <label for="larguraDasAncas">Largura das Ancas:</label>
-                <Field v-decimal-input type="number" v-model="larguraDasAncas" class="form-control" id="larguraDasAncas"
-                    placeholder="Altura do dorso" :rules="validate" name="larguraDasAncas" />
+                <div class="form-inputs">
+                    <label class="form-label" for="larguraDasAncas">Largura das Ancas:</label>
+                    <Field v-decimal-input type="number" v-model="larguraDasAncas" class="form-control" id="larguraDasAncas"
+                        placeholder="Altura do dorso" :rules="validate" name="larguraDasAncas" />
+                </div>
                 <ErrorMessage name="larguraDasAncas" style="color: red;" />
             </div>
             <div class="form-group mb-2">
-                <label for="larguraDoTorax">Perimetro do Torax:</label>
-                <Field v-decimal-input type="number" v-model="larguraDoTorax" class="form-control" id="larguraDoTorax"
-                    placeholder="Perimetro do Torax" :rules="validate" name="larguraDoTorax" />
+                <div class="form-inputs">
+                    <label class="form-label" for="larguraDoTorax">Perimetro do Torax:</label>
+                    <Field v-decimal-input type="number" v-model="larguraDoTorax" class="form-control" id="larguraDoTorax"
+                        placeholder="Perimetro do Torax" :rules="validate" name="larguraDoTorax" />
+                </div>
                 <ErrorMessage name="larguraDoTorax" style="color: red;" />
             </div>
             
@@ -187,7 +205,7 @@ export default {
 <style scoped>
     #info{
         font-family: 'Poppins', sans-serif;
-        font-weight: 500;
+        font-weight: 700;
         font-size: 0.9rem;
         color: #ffffff;
         background-color: #00755c;
@@ -210,6 +228,7 @@ export default {
     }
 
     form{
+        
         padding: 10px;
         padding-bottom: 100px;
         font-family: 'Poppins' sans-serif;
@@ -218,6 +237,27 @@ export default {
     .form-group{
         padding-bottom: 1rem;
     }
+
+    .form-inputs{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        background-color: rgba(0, 46, 52, 0.07);
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    .form-label{
+        font-weight: 700;
+        width: 50%;
+    }
+
+    .form-control{
+        width: 50%;
+    }
+
+  
+    
 
     .form-control:focus {
     border-color: #00755c;
