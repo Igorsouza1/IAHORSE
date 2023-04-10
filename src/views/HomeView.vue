@@ -109,45 +109,133 @@
           <img src="../assets/knnalgo.png" alt="">
         </div>
       </div>
+      
     </div>  
+
+    <div class="custom-shape-divider-bottom-1680807326">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div>
     </section>
+
     <section class="info">
-      <h1 class="title app-title">Como tirar as medidas?</h1>
-      <div class="medidas">
-        <span>Altura da Cernelha (AC)</span>
-        <p></p>
+      <h1 class="title info-title">Como tirar as medidas?</h1>
+      <div class="medidas-container">
+        <div class="medidas" @click="toggle(0)">
+          <span>Altura da Cernelha (AC) <font-awesome-icon :icon="expandedIndex === 0 ? 'chevron-left' : 'chevron-down'" class="icon" /></span>
+          
+          <transition name="expand">
+            <div class="expand-container" v-if="expandedIndex === 0">
+              <p>Altura do pé à cernelha</p>
+              <img src="../assets/AlturadaCernelha.png" alt="Imagem da medida altura da cernelha" />
+            </div>
+          </transition>
+        </div>
       </div>
-      <div class="medidas">
-        <span>altura na garupa (AG)</span>
-        <p></p>
+
+      <div class="medidas-container">
+        <div class="medidas" @click="toggle(1)">
+          <span>Altura do Dorso (AD) <font-awesome-icon :icon="expandedIndex === 1 ? 'chevron-left' : 'chevron-down'" class="icon" /></span>
+          
+          <transition name="expand">
+            <div class="expand-container" v-if="expandedIndex === 1">
+              <p>Altura do pé à cernelha</p>
+              <img src="../assets/AlturadaCernelha.png" alt="Imagem da medida altura da cernelha" />
+            </div>
+          </transition>
+        </div>
       </div>
-      <div class="medidas">
-        <span>Altura do dorso (AD)</span>
-        <p></p>
+
+      <div class="medidas-container">
+        <div class="medidas" @click="toggle(2)">
+          <span>Altura da Garupa (AG) <font-awesome-icon :icon="expandedIndex === 2 ? 'chevron-left' : 'chevron-down'" class="icon" /></span>
+          
+          <transition name="expand">
+            <div class="expand-container" v-if="expandedIndex === 2">
+              <p>Altura do pé à cernelha</p>
+              <img src="../assets/AlturadaCernelha.png" alt="Imagem da medida altura da cernelha" />
+            </div>
+          </transition>
+        </div>
       </div>
-      <div class="medidas">
-        <span>Comprimento do Corpo (CC)</span>
-        <p></p>
+
+      <div class="medidas-container">
+        <div class="medidas" @click="toggle(3)">
+          <span>Comprimento do Corpo (CC) <font-awesome-icon :icon="expandedIndex === 3 ? 'chevron-left' : 'chevron-down'" class="icon" /></span>
+          
+          <transition name="expand">
+            <div class="expand-container" v-if="expandedIndex === 3">
+              <p>Altura do pé à cernelha</p>
+              <img src="../assets/AlturadaCernelha.png" alt="Imagem da medida altura da cernelha" />
+            </div>
+          </transition>
+        </div>
       </div>
-      <div class="medidas">
-        <span>Comprimento da Espádua (CE)</span>
-        <p></p>
+
+      <div class="medidas-container">
+        <div class="medidas" @click="toggle(4)">
+          <span>Comprimento da Espadua <font-awesome-icon :icon="expandedIndex === 4 ? 'chevron-left' : 'chevron-down'" class="icon" /></span>
+          
+          <transition name="expand">
+            <div class="expand-container" v-if="expandedIndex === 4">
+              <p>Altura do pé à cernelha</p>
+              <img src="../assets/AlturadaCernelha.png" alt="Imagem da medida altura da cernelha" />
+            </div>
+          </transition>
+        </div>
       </div>
-      <div class="medidas">
-        <span>Compriemnto do Dorso Lombo (CDL)</span>
-        <p></p>
+
+      <div class="medidas-container">
+        <div class="medidas" @click="toggle(5)">
+          <span>Comprimento DorsoLombar (CDL)<font-awesome-icon :icon="expandedIndex === 5 ? 'chevron-left' : 'chevron-down'" class="icon" /></span>
+          
+          <transition name="expand">
+            <div class="expand-container" v-if="expandedIndex === 5">
+              <p>Altura do pé à cernelha</p>
+              <img src="../assets/AlturadaCernelha.png" alt="Imagem da medida altura da cernelha" />
+            </div>
+          </transition>
+        </div>
       </div>
-      <div class="medidas">
-        <span>Largura do Peito (LP)</span>
-        <p></p>
+
+      <div class="medidas-container">
+        <div class="medidas" @click="toggle(6)">
+          <span>Largura do Peito (LP) <font-awesome-icon :icon="expandedIndex === 6 ? 'chevron-left' : 'chevron-down'" class="icon" /></span>
+          
+          <transition name="expand">
+            <div class="expand-container" v-if="expandedIndex === 6">
+              <p>Altura do pé à cernelha</p>
+              <img src="../assets/AlturadaCernelha.png" alt="Imagem da medida altura da cernelha" />
+            </div>
+          </transition>
+        </div>
       </div>
-      <div class="medidas">
-        <span>Largura da Anca (LA)</span>
-        <p></p>
+
+      <div class="medidas-container">
+        <div class="medidas" @click="toggle(7)">
+          <span>Largura da Anca (LA) <font-awesome-icon :icon="expandedIndex === 7 ? 'chevron-left' : 'chevron-down'" class="icon" /></span>
+          
+          <transition name="expand">
+            <div class="expand-container" v-if="expandedIndex === 7">
+              <p>Altura do pé à cernelha</p>
+              <img src="../assets/AlturadaCernelha.png" alt="Imagem da medida altura da cernelha" />
+            </div>
+          </transition>
+        </div>
       </div>
-      <div class="medidas">
-        <span>Perímetro Torácico (PT)</span>
-        <p></p>
+
+      <div class="medidas-container">
+        <div class="medidas" @click="toggle(8)">
+          <span>Perimetro do Torax (PT) <font-awesome-icon :icon="expandedIndex === 8 ? 'chevron-left' : 'chevron-down'" class="icon" /></span>
+          
+          <transition name="expand">
+            <div class="expand-container" v-if="expandedIndex === 8">
+              <p>Altura do pé à cernelha</p>
+              <img src="../assets/AlturadaCernelha.png" alt="Imagem da medida altura da cernelha" />
+            </div>
+          </transition>
+        </div>
       </div>
     </section>
 
@@ -168,7 +256,21 @@
   <script>
 
   export default {
-    name: 'HomeView'
+    name: 'HomeView',
+    data() {
+      return {
+        expandedIndex: -1,
+      };
+    },
+    methods: {
+      toggle(index) {
+        if (this.expandedIndex === index) {
+          this.expandedIndex = -1;
+        } else {
+          this.expandedIndex = index;
+        }
+      },
+    },
   }
   </script>
   <style scoped>
@@ -190,7 +292,7 @@
     left: 0;
     z-index: 1;
     width: 100%;
-    height: 90%;
+    height: 90vh;
     background-color: rgba(0, 0, 0, 0.3); /* Aqui definimos a cor e a transparência do overlay */
   }
   
@@ -350,7 +452,7 @@
     height: 100%;
     text-align: center;
     padding: 1.25rem;
-    
+    position: relative;
   }
 
   .app-wrapper{
@@ -378,6 +480,27 @@
     letter-spacing: 1px;
   }
 
+  .custom-shape-divider-bottom-1680807326 {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1680807326 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+.custom-shape-divider-bottom-1680807326 .shape-fill {
+    fill:#004443;
+}
+
   .info{
     background-color: #004443;
     height: 100%;
@@ -389,19 +512,66 @@
 
   .info-title{
     font-size: 2rem;
-    color: black;
+    color: #fff;
     margin-bottom: 2.5rem;
     margin-top: 1rem;
   }
 
   .medidas{
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
     padding: 2rem;
   }
 
   .medidas span{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
+  }
+
+  .medidas img{
+    max-width: 250px;
+  }
+
+
+
+  .expand-container{
+    align-items: center;
+    border: 1px solid rgba(0,0,0,40%);
+    background-color: rgba(0,0,0,30%);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .expand-container p{
+    font-weight: 400;
+  }
+
+  .expand-container img{
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  .expand-enter-active,
+  .expand-leave-active {
+    transition: all 0.2s ;
+  }
+
+  .expand-enter-from,
+  .expand-leave-to {
+    opacity: 0;
+    max-height: 10%;
+    overflow: hidden;
+  }
+
+  .expand-enter-to,
+  .expand-leave-from {
+    opacity: 1;
+    max-height: 100%; /* ajuste este valor de acordo com o conteúdo */
+    overflow: hidden;
   }
 
   footer{
@@ -674,34 +844,112 @@
 }
 
 
+.custom-shape-divider-bottom-1680807326 {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1680807326 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+.custom-shape-divider-bottom-1680807326 .shape-fill {
+    fill:#004443;
+}
+
   .info{
     height: 100%;
     width: 100%;
     text-align: center;
+    background-color: #004443;
   }
 
   .info-title{
     font-size: 2rem;
-    color: black;
+    color: #fff;
     margin-bottom: 2.5rem;
-    margin-top: 1.5rem;
+    padding-top: 2rem;
   }
 
   .medidas{
-    width: 100%;
-    padding: 2rem;
+    width: 50%;
+    position: relative;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+    color: #fff;
   }
 
   .medidas span{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  } 
+  .medidas img{
+    max-width: 250px;
+  }
+
+  .icon {
+    position: absolute;
+    padding-left: 1rem;
+    top: 2px;
+  }
+
+  .expand-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgba(0,0,0,40%);
+    background-color: rgba(0,0,0,30%);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .expand-container p{
+    font-weight: 400;
+  }
+
+  .expand-container img{
+    width: 200px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  .expand-enter-active,
+  .expand-leave-active {
+    transition: all 0.2s ;
+  }
+
+  .expand-enter-from,
+  .expand-leave-to {
+    opacity: 0;
+    max-height: 10%;
+    overflow: hidden;
+  }
+
+  .expand-enter-to,
+  .expand-leave-from {
+    opacity: 1;
+    max-height: 100%; /* ajuste este valor de acordo com o conteúdo */
+    overflow: hidden;
   }
 
   footer{
     width: 100%;
     content: '';
     text-align: center;
-    background: #004443;
+    background: rgba(0,0,0,90%);
     color: white;
     display: flex;
     
