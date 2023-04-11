@@ -18,22 +18,24 @@ Vue Router
 
 ## Instalação e Configuração
 
-Clone o repositório:
+1 . Clone o repositório:
 
-´bash
-Copy code
+```bash
 git clone https://github.com/seu_usuario/equiclass.git
-cd equiclass´
-Instale as dependências:
+cd equiclass
+```
 
-Copy code
+2 . Instale as dependências:
+```bash
 npm install
 Inicie o servidor de desenvolvimento:
-
-arduino
-Copy code
+```
+3 . Inicie o servidor de desenvolvimento:
+```bash
 npm run serve
-Acesse a aplicação em seu navegador através do endereço http://localhost:8080.
+```
+
+4 . Acesse a aplicação em seu navegador através do endereço http://localhost:8080.
 
 ## Como contribuir
 Se você deseja contribuir com este projeto, siga os passos a seguir:
