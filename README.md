@@ -1,24 +1,48 @@
-# cavalopwa
+# EquiClass
 
-## Project setup
-```
-yarn install
-```
+O EquiClass é um aplicativo desenvolvido para auxiliar os criadores de cavalos Pantaneiros na identificação da qualidade dos cavalos com base em suas medidas corporais. A aplicação foi desenvolvida utilizando Vue.js 3, Service Workers e outras bibliotecas JavaScript.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Tecnologias e Frameworks
+Vue.js 3
+Service Workers
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Dependências do Projeto
+ml-knn
+Bootstrap 5
+Vee-validate
+Dexie
+Font Awesome
+Popper.js
+Core-js
+Vue Router
 
-### Lints and fixes files
-```
-yarn lint
-```
+## Instalação e Configuração
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Clone o repositório:
+
+bash
+Copy code
+git clone https://github.com/seu_usuario/equiclass.git
+cd equiclass
+Instale as dependências:
+
+Copy code
+npm install
+Inicie o servidor de desenvolvimento:
+
+arduino
+Copy code
+npm run serve
+Acesse a aplicação em seu navegador através do endereço http://localhost:8080.
+
+## Como contribuir
+Se você deseja contribuir com este projeto, siga os passos a seguir:
+
+Faça um fork do repositório.
+Crie uma branch com as suas alterações: git checkout -b minha-nova-funcionalidade.
+Faça commit das suas alterações: git commit -m 'Adiciona nova funcionalidade'.
+Envie suas alterações para a branch: git push origin minha-nova-funcionalidade.
+Crie um Pull Request no repositório original.
+
+## Licença
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE.md para obter mais detalhes.
