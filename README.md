@@ -20,10 +20,10 @@ Vue Router
 
 Clone o repositório:
 
-bash
+´bash
 Copy code
 git clone https://github.com/seu_usuario/equiclass.git
-cd equiclass
+cd equiclass´
 Instale as dependências:
 
 Copy code
