@@ -20,7 +20,7 @@
                 <div class="form-inputs">
                     <label class="form-label" for="alturaDoDorso">Altura do Dorso:</label>
                     <Field v-decimal-input type="number" v-model="alturaDoDorso" class="form-control"
-                        id="alturaDoDorso" placeholder="altura Do Dorso" :rules="validate"
+                        id="alturaDoDorso"  :rules="validate"
                         name="alturaDoDorso" />
                 </div>
                 <ErrorMessage name="alturaDoDorso" style="color: red;" />
@@ -29,7 +29,7 @@
                 <div class="form-inputs">
                     <label class="form-label" for="alturaDaGarupa">Altura da Garupa:</label>
                     <Field v-decimal-input type="number" v-model="alturaDaGarupa" class="form-control"
-                        id="alturaDaGarupa" placeholder="altura Da Garupa" :rules="validate"
+                        id="alturaDaGarupa"  :rules="validate"
                         name="alturaDaGarupa" />
                 </div>
                 <ErrorMessage name="alturaDaGarupa" style="color: red;" />
@@ -38,7 +38,7 @@
                 <div class="form-inputs">
                     <label class="form-label" for="comprimentoDoCorpo">Comprimento do Corpo:</label>
                     <Field v-decimal-input type="number" v-model="comprimentoDoCorpo" class="form-control" id="comprimentoDoCorpo"
-                        placeholder="comprimento Do Corpo" :rules="validate" name="comprimentoDoCorpo" />
+                         :rules="validate" name="comprimentoDoCorpo" />
                 </div>
                 <ErrorMessage name="comprimentoDoCorpo" style="color: red;" />
             </div>
@@ -46,7 +46,7 @@
                 <div class="form-inputs">
                     <label class="form-label" for="comprimentoDaEspadua">Comprimento da Espadua:</label>
                     <Field v-decimal-input type="number" v-model="comprimentoDaEspadua" class="form-control" id="comprimentoDaEspadua"
-                        placeholder="Comprimento Da Espadua" :rules="validate" name="comprimentoDaEspadua" />
+                         :rules="validate" name="comprimentoDaEspadua" />
                 </div>
                 <ErrorMessage name="comprimentoDaEspadua" style="color: red;" />
             </div>
@@ -54,7 +54,7 @@
                 <div class="form-inputs">
                     <label class="form-label" for="comprimentoDorsoLombar">Comprimento DorsoLombar:</label>
                     <Field v-decimal-input type="number" v-model="comprimentoDorsoLombar" class="form-control" id="comprimentoDorsoLombar"
-                        placeholder="Comprimento DorsoLombar" :rules="validate" name="comprimentoDorsoLombar" />
+                         :rules="validate" name="comprimentoDorsoLombar" />
                 </div>
                 <ErrorMessage name="comprimentoDorsoLombar" style="color: red;" />
             </div>
@@ -62,7 +62,7 @@
                 <div class="form-inputs">
                     <label class="form-label" for="larguraDoPeito">Largura do Peito:</label>
                     <Field v-decimal-input type="number" v-model="larguraDoPeito" class="form-control" id="larguraDoPeito"
-                        placeholder="largura Do Peito" :rules="validate" name="larguraDoPeito" />
+                         :rules="validate" name="larguraDoPeito" />
                 </div>
                 <ErrorMessage name="larguraDoPeito" style="color: red;" />
             </div>
@@ -70,7 +70,7 @@
                 <div class="form-inputs">
                     <label class="form-label" for="larguraDasAncas">Largura das Ancas:</label>
                     <Field v-decimal-input type="number" v-model="larguraDasAncas" class="form-control" id="larguraDasAncas"
-                        placeholder="Altura do dorso" :rules="validate" name="larguraDasAncas" />
+                         :rules="validate" name="larguraDasAncas" />
                 </div>
                 <ErrorMessage name="larguraDasAncas" style="color: red;" />
             </div>
@@ -78,7 +78,7 @@
                 <div class="form-inputs">
                     <label class="form-label" for="larguraDoTorax">Perimetro do Torax:</label>
                     <Field v-decimal-input type="number" v-model="larguraDoTorax" class="form-control" id="larguraDoTorax"
-                        placeholder="Perimetro do Torax" :rules="validate" name="larguraDoTorax" />
+                         :rules="validate" name="larguraDoTorax" />
                 </div>
                 <ErrorMessage name="larguraDoTorax" style="color: red;" />
             </div>
@@ -245,6 +245,7 @@ export default {
         background-color: rgba(0, 46, 52, 0.07);
         padding: 0.5rem;
         border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .form-label{

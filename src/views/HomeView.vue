@@ -593,11 +593,6 @@
     padding-bottom: 100px;
   }
 
-  .footer-container{
-    width: 50%;
-    
-  }
-
   .footer-container p{ 
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -613,6 +608,9 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
   }
 
   .footer-right img{

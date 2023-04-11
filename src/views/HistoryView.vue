@@ -4,16 +4,21 @@
             <h1>Historico</h1>
             <p>Historico de cavalos classificados</p>
         </div>
-        <ul v-if="medidas.length > 0" class="history-list">
-            <li @click="selectMedida(medida)" class="history-card" v-for="medida in medidas" :key="medida.id">
-                CC: {{ medida.comprimentoDoCorpo }} - CE: {{ medida.comprimentoDaEspadua }} - 
-                ...
-                <span v-if="medida.classe === 2">Alta qualidade</span>
-                <span v-if="medida.classe === 1">Media qualidade</span>
-                <span v-if="medida.classe === 0">Baixa qualidade</span>
-            </li>
-        </ul>
-            <p id="historyEmpty" v-else>Nenhum cavalo classificado</p>
+        <div class="history-datas">
+            <ul v-if="medidas.length > 0" class="history-list">
+                <li @click="selectMedida(medida)" class="history-card" v-for="medida in medidas" :key="medida.id">
+                    CC: {{ medida.comprimentoDoCorpo }} - CE: {{ medida.comprimentoDaEspadua }} - 
+                    ...
+                    <span v-if="medida.classe === 2"><img src="../assets/3.png" alt=""></span>
+                    <span v-if="medida.classe === 1"><img src="../assets/2.png" alt=""></span>
+                    <span v-if="medida.classe === 0"><img src="../assets/numero-1.png" alt=""></span>
+                </li>
+            </ul>
+            <div v-else class="history-nofound">
+                <p id="historyEmpty" >Nenhum cavalo classificado</p>
+                <img src="../assets/horseNotFound.svg" alt="">
+            </div>
+        </div>
         <ModalHistory v-if="showModal" @close="closeModal" :selectedMedida="selectedMedida" @deleted="handleDeleted"/>
         <div class="saveCsv">
             <button v-if="medidas.length > 0" @click="exportCSV()" class="saveCsvButton">Exportar CSV</button>
@@ -112,9 +117,25 @@ export default {
         font-family: 'Poppins';
     }
 
+    .history-datas{
+        background-color: rgba(0,0,0,0.07);
+        width: 90%;
+        height: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.9);
+    }
+
+    .history-datas p{
+        display: flex;
+        align-items: center;
+    }
+
     .history-list {
         list-style-type: none;
         padding: 0;
+        margin-bottom: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -127,12 +148,23 @@ export default {
         box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.12), 3px 1px 2px rgba(0, 0, 0, 0.24);
         padding: 20px;
         margin-bottom: 20px;
-        width: 80%;
+        width: 100%;
         max-width: 600px;
         transition: box-shadow 0.3s;
-
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        word-spacing: 1px;
+    }
+
+    .history-card span img{
+        width: 40px;
+    }
+
+    .img-class{
+        width: 40px;
+        height: 40px;
     }
 
     .history-card:hover {
@@ -142,7 +174,8 @@ export default {
     #historyEmpty{
         transition: opacity 1s ease;
         height: 100%;
-        color: red;
+        color: rgba(0,0,0,0.5);
+        
         font-weight: bold;
         font-size: 1.3rem;
     }
