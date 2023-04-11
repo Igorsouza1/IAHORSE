@@ -142,6 +142,13 @@ export default {
         width: 100%;
     }
 
+    .history-nofound{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .history-card {
         background-color: #fff;
         border-radius: 5px;
@@ -174,7 +181,7 @@ export default {
     #historyEmpty{
         transition: opacity 1s ease;
         height: 100%;
-        color: rgba(0,0,0,0.5);
+        color: rgba(189, 92, 92, 0.5);
         
         font-weight: bold;
         font-size: 1.3rem;

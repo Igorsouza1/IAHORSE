@@ -242,22 +242,34 @@
     <footer>
       <div class="footer-container"></div>
       <div class="footer-left">
-      <img src="../assets/embrapalogo.jpg" alt="">
-      <p>Empresa Brasileira de Pesquisa Agropecuária
-
-      Parque Estação Biológica - PqEB, s/nº, Brasília, DF
-
-      CEP 70770-901 / Telefone (61) 3448-4433</p>
-
+      <a href="https://www.embrapa.br/pantanal">
+        <img src="../assets/embrapalogo.jpg" alt="">
+      </a>
+      <a href="https://www.ifms.edu.br/">
+        <img src="../assets/ifms.png" alt="">
+      </a>
+      <div class="footer-left-content">
+        <p>Sobre IFMS</p>
+        <div class="divider"></div>
+        <a href="https://www.ifms.edu.br/acesso-a-informacao/institucional/contato">Contato</a>
+        <a href="https://www.ifms.edu.br/acesso-a-informacao/institucional/estrutura-organizacional">Estrutura Oranizacional</a>
+        <a href="https://www.ifms.edu.br/acesso-a-informacao/institucional/quem-e-quem">Quem é quem</a>
+      </div>
     </div>
 
     <div class="footer-right">
-      <img src="../assets/ifms.png" alt="">
-      <p>
-        Todos os direitos reservados, conforme Lei nº 9.610
+      <p>Empresa Brasileira de Pesquisa Agropecuária
 
-        Portal Embrapa
-      </p>
+          Parque Estação Biológica - PqEB, s/nº, Brasília, DF
+
+          CEP 70770-901 / Telefone (61) 3448-4433</p>
+          <div class="footer-right-content">
+            <p>Sobre Embrapa</p>
+            <div class="divider-right"></div>
+            <a href="https://www.embrapa.br/sobre-a-embrapa">Sobre</a>
+            <a href="https://www.embrapa.br/fale-conosco">Fale Conosco</a>
+            <a href="https://www.embrapa.br/embrapa-no-brasil">Embrapa no Brasil</a>
+          </div>
     </div>
     </footer>
   </template>
@@ -589,7 +601,6 @@
     background: rgba(0,0,0,80%);
     color: white;
     display: flex;
-    flex-direction: column;
     padding-bottom: 100px;
   }
 
@@ -598,25 +609,82 @@
     font-weight: 300;
   }
 
+  .footer-left{
+    width: 50%;
+    text-align: left;
+  }
+
   .footer-left img{
-    width: 200px;
-    padding: 1rem;
+    max-width: 150px;
+    padding: 0.5rem;
     border-radius: 20px;
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .footer-left p{
+    margin-bottom: 0;
+    padding-left: 1rem;
+  }
+
+  .footer-left-content{
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+  }
+
+  .divider {
+    width: 40%;
+    margin-left: 1rem;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .footer-left-content a{
+    text-decoration: none;
+    padding: 0.2rem;
+    padding-left: 1rem;
   }
 
   .footer-right{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 90%;
+    width: 50%;
+  }
+
+  .divider-right{
+    width: 40%;
+    margin-left: auto;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 5px;
+    margin-bottom: 1rem;
+  }
+  .footer-right > p{
+    font-weight: 400;
+    font-size: 0.8rem;
   }
 
   .footer-right img{
     width: 200px;
     padding: 1rem;
     border-radius: 20px;
+  }
+
+  .footer-right-content{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 1rem;
+  }
+
+  .footer-right-content p{
+    margin-bottom: 0;
+  }
+
+  .footer-right-content a{
+    text-decoration: none;
+    padding-bottom: 0.2rem;
   }
 }
 

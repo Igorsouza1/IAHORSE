@@ -15,7 +15,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .card {
     display: flex;
     flex-direction: column;

@@ -6,23 +6,59 @@
         <img id="close-img" src="../assets/close.png" alt="">
       </div>
          <div v-if="selectedMedida">
-          <h1 v-if="selectedMedida.classe === 2" > Alta Qualidade</h1>
-          <h1 v-if="selectedMedida.classe === 1" > Media Qualidade</h1>
-          <h1 v-if="selectedMedida.classe === 0" > Baixa Qualidade</h1>
-          <hr>
-          <h3 v-if="selectedMedida.sexo === 0" > Macho</h3>
-          <h3 v-if="selectedMedida.sexo === 1" > Femea</h3>
-          <hr>
+          <div class="classe-container">
+            <h1 v-if="selectedMedida.classe === 2" >Alta Qualidade</h1>
+            <img v-if="selectedMedida.classe === 2" src="../assets/3.png" alt="">
+
+            <h1 v-if="selectedMedida.classe === 1" > Media Qualidade</h1>
+            <img v-if="selectedMedida.classe === 1" src="../assets/2.png" alt="">
+
+
+            <h1 v-if="selectedMedida.classe === 0" > Baixa Qualidade</h1>
+            <img v-if="selectedMedida.classe === 0" src="../assets/numero-1.png" alt="">
+
+          </div>
           <div class="medidas-container">
-            <p>comprimento do Corpo: <span>{{ selectedMedida.comprimentoDoCorpo }}</span></p>
-            <p>comprimento da Espadua: <span>{{ selectedMedida.comprimentoDaEspadua }}</span></p>
-            <p>comprimento DorsoLombar: <span>{{ selectedMedida.comprimentoDorsoLombar }}</span></p>
-            <p>largura do Peito: <span>{{ selectedMedida.larguraDoPeito }}</span></p>
-            <p>largura das Ancas: <span>{{ selectedMedida.larguraDasAncas }}</span></p>
-            <p>altura da Garupa: <span>{{ selectedMedida.alturaDaGarupa }}</span></p>
-            <p>altura da Cernelha: <span>{{ selectedMedida.alturaDaCernelha }}</span></p>
-            <p>altura do Dorso: <span>{{ selectedMedida.alturaDoDorso }}</span></p>
-            <p>largura do Torax: <span>{{ selectedMedida.larguraDoTorax }}</span></p>
+            <div class="medida">
+              <p v-if="selectedMedida.sexo === 0" > Macho</p>
+              <p v-if="selectedMedida.sexo === 1" > Femea</p>
+            </div>
+            <div class="medida">
+              <p>Comprimento do Corpo:</p> <span>{{ selectedMedida.comprimentoDoCorpo }}</span>
+            </div>
+
+            <div class="medida">
+              <p>Comprimento da Espadua:</p> <span>{{ selectedMedida.comprimentoDaEspadua }}</span>
+            </div>
+
+            <div class="medida">
+            <p>Comprimento DorsoLombar:</p> <span>{{ selectedMedida.comprimentoDorsoLombar }}</span>
+          </div>
+
+          <div class="medida">
+            <p>Largura do Peito:</p> <span>{{ selectedMedida.larguraDoPeito }}</span>
+          </div>
+
+          <div class="medida">
+            <p>Largura das Ancas:</p> <span>{{ selectedMedida.larguraDasAncas }}</span>
+          </div>
+
+          <div class="medida">
+            <p>Altura da Garupa: </p><span>{{ selectedMedida.alturaDaGarupa }}</span>
+          </div>
+
+          <div class="medida">
+            <p>Altura da Cernelha:</p> <span>{{ selectedMedida.alturaDaCernelha }}</span>
+          </div>
+
+          <div class="medida">
+            <p>Altura do Dorso: </p><span>{{ selectedMedida.alturaDoDorso }}</span>
+
+          </div>
+
+          <div class="medida">
+            <p>Largura do Torax:</p> <span>{{ selectedMedida.larguraDoTorax }}</span>
+          </div>
           </div>
          </div>
         <div class="modal-button">
@@ -79,6 +115,10 @@ export default {
 
 #close-img{
   width: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 1rem;
 }
 
 .modal-content {
@@ -87,6 +127,7 @@ export default {
   border-radius: 8px;
   color: black;
   max-width: 90%;
+  max-height: 95%;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -102,6 +143,43 @@ export default {
   opacity: 0;
 }
 
+.classe-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 117, 92, 0.5);
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1.1rem;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.classe-container h1{
+  margin-bottom: 0;
+}
+
+.classe-container img{
+  width: 40px;
+  object-fit: cover;
+}
+
+.medida{
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin: 0.5rem; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.medida p{
+  margin: 0;
+}
+
 #excluir{
   display: inline-flex;
   align-items: center;
@@ -114,6 +192,7 @@ export default {
   border: none;
   border-radius: 4px;
   padding: 12px 24px;
+  margin-top: 1rem;
   cursor: pointer;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease; 

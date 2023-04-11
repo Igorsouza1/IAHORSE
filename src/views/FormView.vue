@@ -250,6 +250,7 @@ export default {
 
     .form-label{
         font-weight: 700;
+        margin-bottom: 0;
         width: 50%;
     }
 
