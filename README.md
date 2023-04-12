@@ -2,6 +2,8 @@
 
 O EquiClass é um aplicativo desenvolvido para auxiliar os criadores de cavalos Pantaneiros na identificação da qualidade dos cavalos com base em suas medidas corporais. A aplicação foi desenvolvida utilizando Vue.js 3, Service Workers e outras bibliotecas JavaScript.
 
+## Você pode testar o app acessando: https://iahorse.pages.dev/
+
 ## Tecnologias e Frameworks
 * Vue.js 3
 * Service Workers
