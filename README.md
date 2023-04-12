@@ -42,6 +42,11 @@ Aqui estão algumas capturas de tela que demonstram as funcionalidades e interfa
 ### Tela Inicial
 ![homeview](https://user-images.githubusercontent.com/71149968/231266347-e78d8971-cd01-411f-94c1-3272d36a01f8.png)
 
+### Classificador
+![Classificador](https://user-images.githubusercontent.com/71149968/231476336-7112fc43-a730-4b61-9d8e-6e119b428c3c.png)
+
+### Histórico
+![historico](https://user-images.githubusercontent.com/71149968/231476353-3fb6bd81-23d9-4797-9588-72a76dc72276.png)
 
 ## Como contribuir
 Se você deseja contribuir com este projeto, siga os passos a seguir:
